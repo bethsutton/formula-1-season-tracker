@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Spinner from '../layout/Spinner';
 
 function DriverList() {
   const [drivers, setDrivers] = useState([]);
@@ -29,7 +30,7 @@ function DriverList() {
       </div>
     );
   } else {
-    return <h3>Loading...</h3>;
+    return <Spinner />;
   }
 }
 
