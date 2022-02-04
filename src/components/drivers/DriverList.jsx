@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Spinner from '../layout/Spinner';
+import DriverItem from './DriverItem';
 
 function DriverList() {
   const [drivers, setDrivers] = useState([]);
@@ -23,9 +24,10 @@ function DriverList() {
     return (
       <div className="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
         {drivers.map((driver) => (
-          <h3 key={driver.driverId}>
-            {driver.givenName} {driver.familyName}
-          </h3>
+          // <h3 key={driver.driverId}>
+          //   {driver.givenName} {driver.familyName}
+          // </h3>
+          <DriverItem key={driver.driverId} driver={driver} />
         ))}
       </div>
     );
