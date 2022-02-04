@@ -1,9 +1,10 @@
 import React from 'react';
+import DriverList from '../components/drivers/DriverList';
 
 function Home() {
   return (
     <div>
-      <h1 className="text-6xl">Welcome</h1>
+      <DriverList />
     </div>
   );
 }
