@@ -11,28 +11,30 @@ function Driver() {
 
   const params = useParams();
 
+  // IF THIS BREAKS, ADD ASYNC AWAIT
   useEffect(() => {
     fetchDriverStandings(params.driverId);
   }, []);
 
-  if (loading) {
-    return <Spinner />;
+  if (driverStandings.driver === undefined) {
+    return <div>No driver information found</div>;
   }
 
-  return (
-    <div>
-      <h1>Driver Information:</h1>
-      <p>
-        Driver: {driverStandings.driver.givenName}{' '}
-        {driverStandings.driver.familyName}
-      </p>
-      <p>Position: {driverStandings.score.position}</p>
-      <p>Points: {driverStandings.score.points}</p>
-      <p>Constructor: {driverStandings.constructor.name}</p>
-      <p>Date of Birth: {driverStandings.driver.dateOfBirth}</p>
-      <p>Nationality: {driverStandings.driver.nationality}</p>
-    </div>
-  );
+  if (!loading) {
+    return (
+      <div>
+        <h1>Driver Information:</h1>
+        <p>Driver: {driverStandings.driver.familyName}</p>
+        <p>Position: {driverStandings.score.position}</p>
+        <p>Points: {driverStandings.score.points}</p>
+        <p>Constructor: {driverStandings.constructor.name}</p>
+        <p>Date of Birth: {driverStandings.driver.dateOfBirth}</p>
+        <p>Nationality: {driverStandings.driver.nationality}</p>
+      </div>
+    );
+  } else {
+    return <Spinner />;
+  }
 }
 
 export default Driver;

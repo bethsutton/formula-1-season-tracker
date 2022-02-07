@@ -40,8 +40,11 @@ export const F1Provider = ({ children }) => {
     if (response.status === 404) {
       window.location = '/notfound';
     } else {
+      // console.log('before data');
       const data = await response.json();
+      // console.log(data);
       const finalData = data.MRData.StandingsTable.StandingsLists;
+      // console.log(finalData);
 
       // dispatch({
       //   type: 'GET_DRIVER_STANDINGS',
@@ -50,8 +53,11 @@ export const F1Provider = ({ children }) => {
 
       // TRYING SOMETHING NEW
       const score = finalData[0].DriverStandings[0];
+      // console.log(score);
       const driver = finalData[0].DriverStandings[0].Driver;
+      // console.log(driver);
       const constructor = finalData[0].DriverStandings[0].Constructors[0];
+      // console.log(constructor);
 
       dispatch({
         type: 'GET_DRIVER_STANDINGS',
