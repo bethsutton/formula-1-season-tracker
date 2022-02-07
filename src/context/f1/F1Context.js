@@ -13,7 +13,6 @@ export const F1Provider = ({ children }) => {
 
   const [state, dispatch] = useReducer(f1Reducer, initialState);
 
-  // GET DRIVERS
   const fetchDrivers = async () => {
     setLoading();
 
