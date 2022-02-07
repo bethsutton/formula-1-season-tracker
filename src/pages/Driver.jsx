@@ -1,19 +1,38 @@
 import React from 'react';
 import { useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import F1Context from '../context/f1/F1Context';
+import Spinner from '../components/layout/Spinner';
 
 function Driver() {
-  const { fetchDriverStandings, driverStandings } = useContext(F1Context);
+  const { fetchDriverStandings, driverStandings, loading } =
+    useContext(F1Context);
 
   const params = useParams();
-  const name = driverStandings[0].DriverStandings[0].Driver.givenName;
 
   useEffect(() => {
     fetchDriverStandings(params.driverId);
   }, []);
 
-  return <div>DRIVER INFORMATION FOR {name}</div>;
+  if (loading) {
+    return <Spinner />;
+  }
+
+  return (
+    <div>
+      <h1>Driver Information:</h1>
+      <p>
+        Driver: {driverStandings.driver.givenName}{' '}
+        {driverStandings.driver.familyName}
+      </p>
+      <p>Position: {driverStandings.score.position}</p>
+      <p>Points: {driverStandings.score.points}</p>
+      <p>Constructor: {driverStandings.constructor.name}</p>
+      <p>Date of Birth: {driverStandings.driver.dateOfBirth}</p>
+      <p>Nationality: {driverStandings.driver.nationality}</p>
+    </div>
+  );
 }
 
 export default Driver;

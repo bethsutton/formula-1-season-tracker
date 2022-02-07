@@ -21,7 +21,7 @@ export const F1Provider = ({ children }) => {
     const response = await fetch(`http://ergast.com/api/f1/2021/drivers.json`);
 
     const data = await response.json();
-    const finalData = data.MRData.DriverTable.Drivers;
+    const finalData = await data.MRData.DriverTable.Drivers;
 
     dispatch({
       type: 'GET_DRIVERS',
@@ -43,23 +43,25 @@ export const F1Provider = ({ children }) => {
       const data = await response.json();
       const finalData = data.MRData.StandingsTable.StandingsLists;
 
+      // dispatch({
+      //   type: 'GET_DRIVER_STANDINGS',
+      //   payload: finalData,
+      // });
+
+      // TRYING SOMETHING NEW
+      const score = finalData[0].DriverStandings[0];
+      const driver = finalData[0].DriverStandings[0].Driver;
+      const constructor = finalData[0].DriverStandings[0].Constructors[0];
+
       dispatch({
         type: 'GET_DRIVER_STANDINGS',
-        payload: finalData,
+        payload: {
+          score: score,
+          driver: driver,
+          constructor: constructor,
+        },
       });
     }
-    // console.log(finalData[0].season);
-
-    // let driverStandings = {};
-
-    // for (let i = 0; i < finalData.length; i++) {
-    //   if (finalData[i].season === '2021') {
-    //     console.log(finalData[i]);
-    //     console.log(finalData[i].DriverStandings[0].position);
-    //     driverStandings = finalData[i];
-    //     return driverStandings;
-    //   }
-    // }
   };
 
   // SET LOADING
