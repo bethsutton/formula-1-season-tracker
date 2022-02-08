@@ -9,6 +9,7 @@ export const F1Provider = ({ children }) => {
   const initialState = {
     drivers: [],
     driverStandings: {},
+    driverRaceResults: [],
     loading: false,
   };
 
@@ -70,6 +71,23 @@ export const F1Provider = ({ children }) => {
     }
   };
 
+  // GET CURRENT RACE RESULTS FOR SINGLE DRIVER
+  const fetchDriverRaceResults = async (driverId) => {
+    setLoading();
+
+    const response = await fetch(
+      `http://ergast.com/api/f1/2021/drivers/${driverId}/results.json`
+    );
+
+    const data = await response.json();
+    const finalData = data.MRData.RaceTable.Races;
+
+    dispatch({
+      type: 'GET_DRIVER_RACE_RESULTS',
+      payload: finalData,
+    });
+  };
+
   // SET LOADING
   const setLoading = () => {
     dispatch({ type: 'SET_LOADING' });
@@ -81,8 +99,10 @@ export const F1Provider = ({ children }) => {
         drivers: state.drivers,
         loading: state.loading,
         driverStandings: state.driverStandings,
+        driverRaceResults: state.driverRaceResults,
         fetchDrivers,
         fetchDriverStandings,
+        fetchDriverRaceResults,
       }}
     >
       {children}

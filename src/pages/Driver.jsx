@@ -6,18 +6,25 @@ import { FaTrophy } from 'react-icons/fa';
 
 import F1Context from '../context/f1/F1Context';
 import Spinner from '../components/layout/Spinner';
+import RaceList from '../components/races/RaceList';
+import RaceItem from '../components/races/RaceItem';
 import driverPhoto from '../components/layout/assets/driver.png';
 
 function Driver() {
-  const { fetchDriverStandings, driverStandings, loading } =
-    useContext(F1Context);
+  const {
+    fetchDriverStandings,
+    driverStandings,
+    fetchDriverRaceResults,
+    driverRaceResults,
+    loading,
+  } = useContext(F1Context);
 
   const params = useParams();
 
   // IF THIS BREAKS, ADD ASYNC AWAIT
   useEffect(() => {
     fetchDriverStandings(params.driverId);
-    // fetchRaceResults(params.driverId);
+    fetchDriverRaceResults(params.driverId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -33,7 +40,6 @@ function Driver() {
             Back to Home
           </Link>
         </div>
-
         <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
           <div className="custom-card-image mb-6 md:mb-0">
             <div className="rounded-lg shadow-xl card image-full">
@@ -65,11 +71,9 @@ function Driver() {
               </h1>
 
               {/* STATS */}
-              <p>Position: {driverStandings.score.position}</p>
-              <p>Points: {driverStandings.score.points}</p>
-              <p>Constructor: {driverStandings.constructor.name}</p>
-              <p>Date of Birth: {driverStandings.driver.dateOfBirth}</p>
+
               <p>Nationality: {driverStandings.driver.nationality}</p>
+              <p>Date of Birth: {driverStandings.driver.dateOfBirth}</p>
 
               {/* WIKIPEDIA LINK */}
               <div className="mt-4 card-actions">
@@ -83,75 +87,50 @@ function Driver() {
                 </a>
               </div>
 
-              {/* YOU NEED TO FIX THIS */}
               {/* RACE STATS*/}
               <div className="w-full rounded-lg shadow-md bg-base-100 stats">
                 <div className="stat">
-                  <div className="stat-title text-md">Points</div>
-                  <div className="text-lg stat-value">10</div>
+                  <div className="stat-title text-md">Position</div>
+                  <div className="text-lg stat-value">
+                    {driverStandings.score.position}
+                  </div>
                 </div>
                 <div className="stat">
-                  <div className="stat-title text-md">Position</div>
-                  <div className="text-lg stat-value">1</div>
+                  <div className="stat-title text-md">Points</div>
+                  <div className="text-lg stat-value">
+                    {driverStandings.score.points}
+                  </div>
                 </div>
                 <div className="stat">
                   <div className="stat-title text-md">Races Won</div>
-                  <div className="text-lg stat-value">5</div>
+                  <div className="text-lg stat-value">
+                    {driverStandings.score.wins}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* RACE 1 */}
-        <div className="w-full py-2 mb-2 rounded-lg shadow-md bg-base-100 stats">
-          {/* STAT */}
-          <div className="stat">
-            <div className="stat-title pr-5">Monza</div>
-            <div className="stat-value pr-5 text-3xl md:text-4xl">
-              Race stats
-            </div>
-            <div className="stat-figure text-error">Race win</div>
-          </div>
-          <div className="stat">
-            <div className="stat-title pr-5">Monza</div>
-            <div className="stat-value pr-5 text-3xl md:text-4xl">
-              Race stats
-            </div>
-            <div className="stat-figure text-error">Race win</div>
-          </div>
-          <div className="stat">
-            <div className="stat-title pr-5">Monza</div>
-            <div className="stat-value pr-5 text-3xl md:text-4xl">
-              Race stats
-            </div>
-            <div className="stat-figure text-error">Race win</div>
-          </div>
-        </div>
-        {/* RACE 2 */}
-        <div className="w-full py-2 mb-2 rounded-lg shadow-md bg-base-100 stats">
-          {/* STAT */}
-          <div className="stat">
-            <div className="stat-title pr-5">Monza</div>
-            <div className="stat-value pr-5 text-3xl md:text-4xl">
-              Race stats
-            </div>
-            <div className="stat-figure text-error">Race win</div>
-          </div>
-          <div className="stat">
-            <div className="stat-title pr-5">Monza</div>
-            <div className="stat-value pr-5 text-3xl md:text-4xl">
-              Race stats
-            </div>
-            <div className="stat-figure text-error">Race win</div>
-          </div>
-          <div className="stat">
-            <div className="stat-title pr-5">Monza</div>
-            <div className="stat-value pr-5 text-3xl md:text-4xl">
-              Race stats
-            </div>
-            <div className="stat-figure text-error">Race win</div>
-          </div>
+        {/* RACELIST IS BROKEN, SO RACEITEM WILL LIVE IN THE DRIVER PAGE FOR NOW */}
+
+        <div>
+          <table class="table w-full table-zebra">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Grand Prix</th>
+                <th className="hidden md:table-cell">Date</th>
+                <th>Position</th>
+                <th>PTS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {driverRaceResults.map((race) => (
+                <RaceItem key={race.round} race={race} />
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     );
