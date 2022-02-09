@@ -1,8 +1,8 @@
 import React from 'react';
-import DriverList from '../components/drivers/DriverList';
+import ResultsList from '../components/results/ResultsList';
 
 function Home() {
-  return <div>INFORMATION ABOUT CURRENT RACE / LEADER</div>;
+  return <ResultsList />;
 }
 
 export default Home;

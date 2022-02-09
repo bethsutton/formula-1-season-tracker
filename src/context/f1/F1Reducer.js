@@ -18,6 +18,12 @@ const f1Reducer = (state, action) => {
         driverRaceResults: action.payload,
         loading: false,
       };
+    case 'GET_RESULTS':
+      return {
+        ...state,
+        results: action.payload,
+        loading: false,
+      };
     case 'SET_LOADING':
       return {
         ...state,

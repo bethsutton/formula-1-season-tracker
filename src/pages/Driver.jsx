@@ -76,7 +76,7 @@ function Driver() {
               <p>Date of Birth: {driverStandings.driver.dateOfBirth}</p>
 
               {/* WIKIPEDIA LINK */}
-              <div className="mt-4 card-actions">
+              <div className="mt-4 mb-4 card-actions">
                 <a
                   href={driverStandings.driver.url}
                   target="_blank"
@@ -113,7 +113,6 @@ function Driver() {
         </div>
 
         {/* RACELIST IS BROKEN, SO RACEITEM WILL LIVE IN THE DRIVER PAGE FOR NOW */}
-
         <div>
           <table class="table w-full table-zebra">
             <thead>
