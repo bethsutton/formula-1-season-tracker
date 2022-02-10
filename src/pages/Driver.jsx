@@ -3,13 +3,10 @@ import { useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { FaTrophy } from 'react-icons/fa';
-
 import F1Context from '../context/f1/F1Context';
 import Spinner from '../components/layout/Spinner';
 import RaceList from '../components/races/RaceList';
 import RaceItem from '../components/races/RaceItem';
-import images from '../components/layout/Images';
-import VER from '../components/layout/assets/VER.jpg';
 import DriverPhoto from '../components/layout/DriverPhoto';
 
 function Driver() {
