@@ -98,9 +98,9 @@ export const F1Provider = ({ children }) => {
     );
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     const finalData = data.MRData.RaceTable.Races;
-    console.log(finalData);
+    // console.log(finalData);
 
     dispatch({
       type: 'GET_RESULTS',

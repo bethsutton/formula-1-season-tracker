@@ -8,7 +8,9 @@ import F1Context from '../context/f1/F1Context';
 import Spinner from '../components/layout/Spinner';
 import RaceList from '../components/races/RaceList';
 import RaceItem from '../components/races/RaceItem';
-import driverPhoto from '../components/layout/assets/driver.png';
+import images from '../components/layout/Images';
+import VER from '../components/layout/assets/VER.jpg';
+import DriverPhoto from '../components/layout/DriverPhoto';
 
 function Driver() {
   const {
@@ -36,15 +38,16 @@ function Driver() {
     return (
       <div className="w-full mx-auto lg:w-10/12">
         <div className="mb-4">
-          <Link to="/" className="btn btn-ghost">
-            Back to Home
+          <Link to="/drivers" className="btn btn-ghost">
+            Back to Drivers
           </Link>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
           <div className="custom-card-image mb-6 md:mb-0">
             <div className="rounded-lg shadow-xl card image-full">
+              {/* PHOTO AND NAME */}
               <figure>
-                <img src={driverPhoto} alt="" />
+                <DriverPhoto code={driverStandings.driver.code} />
               </figure>
               <div className="card-body justify-end">
                 <h2 className="card-title mb-0">
@@ -58,7 +61,6 @@ function Driver() {
 
           <div className="col-span-2">
             <div className="mb-6">
-              {/* PHOTO AND NAME */}
               <h1 className="text-3xl card-title">
                 {driverStandings.driver.givenName}{' '}
                 {driverStandings.driver.familyName}
@@ -114,7 +116,7 @@ function Driver() {
 
         {/* RACELIST IS BROKEN, SO RACEITEM WILL LIVE IN THE DRIVER PAGE FOR NOW */}
         <div>
-          <table class="table w-full table-zebra">
+          <table className="table w-full table-zebra">
             <thead>
               <tr>
                 <th></th>

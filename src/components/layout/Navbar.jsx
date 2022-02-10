@@ -33,7 +33,7 @@ function Navbar({ title }) {
 }
 
 Navbar.defaultProps = {
-  title: 'Formula 1 - 2022 Season Tracker',
+  title: 'Formula 1 - 2021 Season Tracker',
 };
 
 Navbar.propTypes = {
