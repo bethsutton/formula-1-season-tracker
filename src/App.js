@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 // PAGES
 import Home from './pages/Home';
 import About from './pages/About';
@@ -9,7 +9,7 @@ import Drivers from './pages/Drivers';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Alert from './components/layout/Alert';
-// CONTECT AND PROVIDERS
+// CONTEXT AND PROVIDERS
 import { F1Provider } from './context/f1/F1Context';
 import { AlertProvider } from './context/alert/AlertContext';
 

@@ -3,7 +3,7 @@ import f1Reducer from './F1Reducer';
 
 const F1Context = createContext();
 
-const URL = 'http://ergast.com/api/f1';
+const URL = 'https://ergast.com/api/f1';
 
 export const F1Provider = ({ children }) => {
   const initialState = {
