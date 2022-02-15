@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/formula-1-season-tracker/static/css/main.74ddd8e4.css",
-    "main.js": "/formula-1-season-tracker/static/js/main.c54e1416.js",
+    "main.js": "/formula-1-season-tracker/static/js/main.b7bd5c1a.js",
     "static/media/spinner.gif": "/formula-1-season-tracker/static/media/spinner.90cfcbfa935d72c55bcb.gif",
     "static/media/driver.png": "/formula-1-season-tracker/static/media/driver.a01a2b87f1cedd7e1634.png",
     "static/media/TotoSmash.jpeg": "/formula-1-season-tracker/static/media/TotoSmash.5ce109cad9e3c8d44b20.jpeg",
@@ -27,10 +27,10 @@
     "static/media/TSU.png": "/formula-1-season-tracker/static/media/TSU.827660d99c85e229312e.png",
     "index.html": "/formula-1-season-tracker/index.html",
     "main.74ddd8e4.css.map": "/formula-1-season-tracker/static/css/main.74ddd8e4.css.map",
-    "main.c54e1416.js.map": "/formula-1-season-tracker/static/js/main.c54e1416.js.map"
+    "main.b7bd5c1a.js.map": "/formula-1-season-tracker/static/js/main.b7bd5c1a.js.map"
   },
   "entrypoints": [
     "static/css/main.74ddd8e4.css",
-    "static/js/main.c54e1416.js"
+    "static/js/main.b7bd5c1a.js"
   ]
 }
