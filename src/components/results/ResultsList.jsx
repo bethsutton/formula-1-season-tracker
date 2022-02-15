@@ -10,8 +10,6 @@ function ResultsList() {
   const { results, loading, dispatch } = useContext(F1Context);
 
   useEffect(() => {
-    // fetchResults();
-
     dispatch({ type: 'SET_LOADING' });
 
     const getResultsData = async () => {
@@ -20,7 +18,7 @@ function ResultsList() {
     };
 
     getResultsData();
-  }, []);
+  }, [dispatch]);
 
   if (!loading) {
     return (

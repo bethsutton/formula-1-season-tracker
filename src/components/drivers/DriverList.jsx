@@ -10,8 +10,6 @@ function DriverList() {
   const { drivers, loading, dispatch } = useContext(F1Context);
 
   useEffect(() => {
-    // fetchDrivers();
-
     dispatch({ type: 'SET_LOADING' });
 
     const getDriverData = async () => {
@@ -20,7 +18,7 @@ function DriverList() {
     };
 
     getDriverData();
-  }, []);
+  }, [dispatch]);
 
   if (!loading) {
     return (

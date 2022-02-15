@@ -15,21 +15,12 @@ import {
 } from '../context/f1/F1Actions';
 
 function Driver() {
-  const {
-    // fetchDriverStandings,
-    driverStandings,
-    // fetchDriverRaceResults,
-    driverRaceResults,
-    loading,
-    dispatch,
-  } = useContext(F1Context);
+  const { driverStandings, driverRaceResults, loading, dispatch } =
+    useContext(F1Context);
 
   const params = useParams();
 
   useEffect(() => {
-    // fetchDriverStandings(params.driverId);
-    // fetchDriverRaceResults(params.driverId);
-
     dispatch({ type: 'SET_LOADING' });
 
     const getStandingsData = async () => {
@@ -44,7 +35,7 @@ function Driver() {
 
     getStandingsData();
     getRaceResultsData();
-  }, []);
+  }, [dispatch]);
 
   // if (driverStandings.driver === undefined) {
   //   return <div>No driver information found</div>;
