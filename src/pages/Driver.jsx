@@ -37,9 +37,10 @@ function Driver() {
     getRaceResultsData();
   }, [dispatch]);
 
-  // if (driverStandings.driver === undefined) {
-  //   return <div>No driver information found</div>;
-  // }
+  if (driverStandings.driver === undefined) {
+    // return <div>No driver information found</div>;
+    return <Spinner />;
+  }
 
   if (!loading) {
     return (
