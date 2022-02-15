@@ -4,11 +4,22 @@ import Spinner from '../layout/Spinner';
 import DriverItem from './DriverItem';
 import F1Context from '../../context/f1/F1Context';
 
+import { fetchDrivers } from '../../context/f1/F1Actions';
+
 function DriverList() {
-  const { drivers, loading, fetchDrivers } = useContext(F1Context);
+  const { drivers, loading, dispatch } = useContext(F1Context);
 
   useEffect(() => {
-    fetchDrivers();
+    // fetchDrivers();
+
+    dispatch({ type: 'SET_LOADING' });
+
+    const getDriverData = async () => {
+      const driverData = await fetchDrivers();
+      dispatch({ type: 'GET_DRIVERS', payload: driverData });
+    };
+
+    getDriverData();
   }, []);
 
   if (!loading) {

@@ -9,27 +9,46 @@ import RaceList from '../components/races/RaceList';
 import RaceItem from '../components/races/RaceItem';
 import DriverPhoto from '../components/layout/DriverPhoto';
 
+import {
+  fetchDriverStandings,
+  fetchDriverRaceResults,
+} from '../context/f1/F1Actions';
+
 function Driver() {
   const {
-    fetchDriverStandings,
+    // fetchDriverStandings,
     driverStandings,
-    fetchDriverRaceResults,
+    // fetchDriverRaceResults,
     driverRaceResults,
     loading,
+    dispatch,
   } = useContext(F1Context);
 
   const params = useParams();
 
-  // IF THIS BREAKS, ADD ASYNC AWAIT
   useEffect(() => {
-    fetchDriverStandings(params.driverId);
-    fetchDriverRaceResults(params.driverId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // fetchDriverStandings(params.driverId);
+    // fetchDriverRaceResults(params.driverId);
+
+    dispatch({ type: 'SET_LOADING' });
+
+    const getStandingsData = async () => {
+      const standingsData = await fetchDriverStandings(params.driverId);
+      dispatch({ type: 'GET_DRIVER_STANDINGS', payload: standingsData });
+    };
+
+    const getRaceResultsData = async () => {
+      const raceResultsData = await fetchDriverRaceResults(params.driverId);
+      dispatch({ type: 'GET_DRIVER_RACE_RESULTS', payload: raceResultsData });
+    };
+
+    getStandingsData();
+    getRaceResultsData();
   }, []);
 
-  if (driverStandings.driver === undefined) {
-    return <div>No driver information found</div>;
-  }
+  // if (driverStandings.driver === undefined) {
+  //   return <div>No driver information found</div>;
+  // }
 
   if (!loading) {
     return (

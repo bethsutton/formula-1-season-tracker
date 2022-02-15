@@ -7,7 +7,6 @@ function DriverPhoto({ code }) {
     'GAS',
     'GIO',
     'HAM',
-    'KUB',
     'LAT',
     'LEC',
     'MAZ',

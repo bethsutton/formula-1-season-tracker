@@ -4,12 +4,22 @@ import Spinner from '../layout/Spinner';
 import ResultsItem from './ResultsItem';
 import F1Context from '../../context/f1/F1Context';
 
+import { fetchResults } from '../../context/f1/F1Actions';
+
 function ResultsList() {
-  const { results, loading, fetchResults } = useContext(F1Context);
+  const { results, loading, dispatch } = useContext(F1Context);
 
   useEffect(() => {
-    fetchResults();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // fetchResults();
+
+    dispatch({ type: 'SET_LOADING' });
+
+    const getResultsData = async () => {
+      const resultsData = await fetchResults();
+      dispatch({ type: 'GET_RESULTS', payload: resultsData });
+    };
+
+    getResultsData();
   }, []);
 
   if (!loading) {
