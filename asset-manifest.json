@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/formula-1-season-tracker/static/css/main.74ddd8e4.css",
+    "main.js": "/formula-1-season-tracker/static/js/main.c54e1416.js",
+    "static/media/spinner.gif": "/formula-1-season-tracker/static/media/spinner.90cfcbfa935d72c55bcb.gif",
+    "static/media/driver.png": "/formula-1-season-tracker/static/media/driver.a01a2b87f1cedd7e1634.png",
+    "static/media/TotoSmash.jpeg": "/formula-1-season-tracker/static/media/TotoSmash.5ce109cad9e3c8d44b20.jpeg",
+    "static/media/SAI.png": "/formula-1-season-tracker/static/media/SAI.915752a14d51303bcf6b.png",
+    "static/media/HAM.png": "/formula-1-season-tracker/static/media/HAM.957a77d75a1d35a7f816.png",
+    "static/media/BOT.png": "/formula-1-season-tracker/static/media/BOT.a8faa89377de070289d4.png",
+    "static/media/ALO.png": "/formula-1-season-tracker/static/media/ALO.f103153c2bdee3bca6d1.png",
+    "static/media/RAI.png": "/formula-1-season-tracker/static/media/RAI.b4847ce69028fbc4a4e5.png",
+    "static/media/VET.png": "/formula-1-season-tracker/static/media/VET.7416f303d8b73d632e40.png",
+    "static/media/PER.png": "/formula-1-season-tracker/static/media/PER.7c7f33a56d91377eda07.png",
+    "static/media/NOR.png": "/formula-1-season-tracker/static/media/NOR.e02e131a9358717de252.png",
+    "static/media/RIC.png": "/formula-1-season-tracker/static/media/RIC.1690025d5fc6203fb014.png",
+    "static/media/LEC.png": "/formula-1-season-tracker/static/media/LEC.97439236ca286baa26c6.png",
+    "static/media/STR.png": "/formula-1-season-tracker/static/media/STR.b06b6cc7840ec9c66b10.png",
+    "static/media/MSC.png": "/formula-1-season-tracker/static/media/MSC.0351ecfba5924d27ed12.png",
+    "static/media/GIO.png": "/formula-1-season-tracker/static/media/GIO.4948e230f49b82410bba.png",
+    "static/media/VER.png": "/formula-1-season-tracker/static/media/VER.20a5f578145fa51a5b2f.png",
+    "static/media/MAZ.png": "/formula-1-season-tracker/static/media/MAZ.4ccc29db218d04124c99.png",
+    "static/media/LAT.png": "/formula-1-season-tracker/static/media/LAT.1080f35ab46dfa30f1ec.png",
+    "static/media/OCO.png": "/formula-1-season-tracker/static/media/OCO.a793902b3da3be0117ea.png",
+    "static/media/GAS.png": "/formula-1-season-tracker/static/media/GAS.13169ff2e5d3efd43412.png",
+    "static/media/RUS.png": "/formula-1-season-tracker/static/media/RUS.3e1da972e218a66f1199.png",
+    "static/media/TSU.png": "/formula-1-season-tracker/static/media/TSU.827660d99c85e229312e.png",
+    "index.html": "/formula-1-season-tracker/index.html",
+    "main.74ddd8e4.css.map": "/formula-1-season-tracker/static/css/main.74ddd8e4.css.map",
+    "main.c54e1416.js.map": "/formula-1-season-tracker/static/js/main.c54e1416.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74ddd8e4.css",
+    "static/js/main.c54e1416.js"
+  ]
+}
