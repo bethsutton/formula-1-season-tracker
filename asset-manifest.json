@@ -1,7 +1,11 @@
 {
   "files": {
-    "main.css": "/formula-1-season-tracker/static/css/main.74ddd8e4.css",
-    "main.js": "/formula-1-season-tracker/static/js/main.b7bd5c1a.js",
+    "main.css": "/formula-1-season-tracker/static/css/main.789b1184.css",
+    "main.js": "/formula-1-season-tracker/static/js/main.6ac875b9.js",
+    "static/media/Ferrari-slider.jpg": "/formula-1-season-tracker/static/media/Ferrari-slider.7d97c411aa730296090a.jpg",
+    "static/media/Mercedes-slider.jpg": "/formula-1-season-tracker/static/media/Mercedes-slider.c6b4c9db67a545d438c6.jpg",
+    "static/media/Redbull-slider.jpg": "/formula-1-season-tracker/static/media/Redbull-slider.25c86bc5726493b582a7.jpg",
+    "static/media/McLaren-slider.jpg": "/formula-1-season-tracker/static/media/McLaren-slider.20eac094fb30dc456f8a.jpg",
     "static/media/spinner.gif": "/formula-1-season-tracker/static/media/spinner.90cfcbfa935d72c55bcb.gif",
     "static/media/driver.png": "/formula-1-season-tracker/static/media/driver.a01a2b87f1cedd7e1634.png",
     "static/media/TotoSmash.jpeg": "/formula-1-season-tracker/static/media/TotoSmash.5ce109cad9e3c8d44b20.jpeg",
@@ -26,11 +30,11 @@
     "static/media/RUS.png": "/formula-1-season-tracker/static/media/RUS.3e1da972e218a66f1199.png",
     "static/media/TSU.png": "/formula-1-season-tracker/static/media/TSU.827660d99c85e229312e.png",
     "index.html": "/formula-1-season-tracker/index.html",
-    "main.74ddd8e4.css.map": "/formula-1-season-tracker/static/css/main.74ddd8e4.css.map",
-    "main.b7bd5c1a.js.map": "/formula-1-season-tracker/static/js/main.b7bd5c1a.js.map"
+    "main.789b1184.css.map": "/formula-1-season-tracker/static/css/main.789b1184.css.map",
+    "main.6ac875b9.js.map": "/formula-1-season-tracker/static/js/main.6ac875b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.74ddd8e4.css",
-    "static/js/main.b7bd5c1a.js"
+    "static/css/main.789b1184.css",
+    "static/js/main.6ac875b9.js"
   ]
 }
