@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function Navbar({ title }) {
   return (
-    <nav className="navbar mb-12 shadow-lg bg-neutral text-neutral-content">
+    <nav className="navbar shadow-lg bg-neutral text-neutral-content">
       <div className="container mx-auto flex flex-row">
         <div className="flex-none hidden md:inline px-2 mx-2">
           <FaTrophy className="inline pr-2 text-3xl" />
@@ -18,6 +18,9 @@ function Navbar({ title }) {
           <div className="flex justify-end">
             <Link to="/" className="btn btn-ghost btn-sm rounded-btn">
               Home
+            </Link>
+            <Link to="/results" className="btn btn-ghost btn-sm rounded-btn">
+              Results
             </Link>
             <Link to="/drivers" className="btn btn-ghost btn-sm rounded-btn">
               Drivers

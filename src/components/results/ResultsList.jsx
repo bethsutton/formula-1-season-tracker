@@ -26,7 +26,7 @@ function ResultsList() {
         <h1 className="text-5xl font-bold align-middle mb-6">
           2021 RACE RESULTS
         </h1>
-        <table className="table w-full table-zebra">
+        <table className="table w-full table-zebra table-auto tableContents">
           <thead>
             <tr>
               <th>Grand Prix</th>

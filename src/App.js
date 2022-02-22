@@ -5,8 +5,10 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Driver from './pages/Driver';
 import Drivers from './pages/Drivers';
+import RaceResults from './pages/RaceResults';
 // COMPONENTS
 import Navbar from './components/layout/Navbar';
+import Slider from './components/layout/Slider';
 import Footer from './components/layout/Footer';
 import Alert from './components/layout/Alert';
 // CONTEXT AND PROVIDERS
@@ -20,13 +22,13 @@ function App() {
         <Router>
           <div className="flex flex-col justify-between h-screen">
             <Navbar />
-
-            <main className="container mx-auto px-3 pb-12">
+            <main>
               <Alert />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/drivers" element={<Drivers />} />
+                <Route path="/results" element={<RaceResults />} />
                 <Route path="/driver/:driverId" element={<Driver />} />
                 <Route path="/notfound" element={<NotFound />} />
                 <Route path="/*" element={<NotFound />} />
