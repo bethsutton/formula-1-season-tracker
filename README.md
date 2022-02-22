@@ -5,7 +5,7 @@
 ## Description
 
 > This Formula 1 Season Tracker helps you keep up with the latest F1 season. Check out your favorite drivers' current standings and the latest race results.
-> The initial functionality of the app will allow users to track results from the current season using the Formula One API.
+> The initial functionality of the app will allow users to track results from the current season using the [Formula One API](https://documenter.getpostman.com/view/11586746/SztEa7bL).
 
 ## Technologies
 
