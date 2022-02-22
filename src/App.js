@@ -20,7 +20,7 @@ function App() {
     <F1Provider>
       <AlertProvider>
         <Router>
-          <div className="flex flex-col justify-between h-screen">
+          <div className="flex flex-col justify-start h-screen">
             <Navbar />
             <main>
               <Alert />
@@ -35,6 +35,7 @@ function App() {
               </Routes>
             </main>
 
+            <div className="flex grow"></div>
             <Footer />
           </div>
         </Router>
