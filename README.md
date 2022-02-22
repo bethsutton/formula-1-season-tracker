@@ -9,7 +9,7 @@
 
 ## Technologies
 
-> This app was built using React, Tailwind CSS, and DaisyUI. is app uses the Formula One API to fetch the latest driver data and race results.
+> This app was built using React, Tailwind CSS, and DaisyUI. It uses the Formula One API to fetch the latest driver data and race results.
 
 ## Usage
 
