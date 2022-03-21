@@ -1,6 +1,6 @@
 // GET LIST OF DRIVERS
 export const fetchDrivers = async () => {
-  const response = await fetch(`https://ergast.com/api/f1/2021/drivers.json`);
+  const response = await fetch(`https://ergast.com/api/f1/2022/drivers.json`);
 
   const data = await response.json();
   const finalData = await data.MRData.DriverTable.Drivers;
@@ -11,7 +11,7 @@ export const fetchDrivers = async () => {
 // GET CURRENT DRIVER STANDINGS FOR SINGLE DRIVER
 export const fetchDriverStandings = async (driverId) => {
   const response = await fetch(
-    `https://ergast.com/api/f1/2021/drivers/${driverId}/driverStandings.json`
+    `https://ergast.com/api/f1/2022/drivers/${driverId}/driverStandings.json`
   );
 
   if (response.status === 404) {
@@ -31,7 +31,7 @@ export const fetchDriverStandings = async (driverId) => {
 // GET CURRENT RACE RESULTS FOR SINGLE DRIVER
 export const fetchDriverRaceResults = async (driverId) => {
   const response = await fetch(
-    `https://ergast.com/api/f1/2021/drivers/${driverId}/results.json`
+    `https://ergast.com/api/f1/2022/drivers/${driverId}/results.json`
   );
 
   const data = await response.json();
@@ -42,7 +42,7 @@ export const fetchDriverRaceResults = async (driverId) => {
 
 // GET ALL RACE RESULTS
 export const fetchResults = async () => {
-  const response = await fetch(`https://ergast.com/api/f1/2021/results/1.json`);
+  const response = await fetch(`https://ergast.com/api/f1/2022/results/1.json`);
 
   const data = await response.json();
   const finalData = data.MRData.RaceTable.Races;
