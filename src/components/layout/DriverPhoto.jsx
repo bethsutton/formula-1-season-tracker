@@ -2,33 +2,35 @@ import React from 'react';
 
 function DriverPhoto({ code }) {
   const driverArr = [
+    'ALB',
     'ALO',
     'BOT',
     'GAS',
     'GIO',
     'HAM',
+    'HUL',
     'LAT',
     'LEC',
-    'MAZ',
+    'MAG',
+    'MSC',
     'NOR',
     'OCO',
     'PER',
-    'RAI',
     'RIC',
     'RUS',
     'SAI',
-    'MSC',
     'STR',
     'TSU',
     'VER',
     'VET',
+    'ZHO',
   ];
 
-  let image = require(`./assets/driver.png`);
+  let image = require(`./assets/driver-photo/driver.jpeg`);
 
   driverArr.forEach((driver) => {
     if (driver === code) {
-      image = require(`./assets/${code}.png`);
+      image = require(`./assets/driver-photo/${code}.jpeg`);
     }
   });
 
