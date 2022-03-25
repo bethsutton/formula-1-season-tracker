@@ -23,7 +23,7 @@ function DriverList() {
   if (!loading) {
     return (
       <>
-        <h1 className="text-5xl font-bold align-middle mb-6">2021 DRIVERS</h1>
+        <h1 className="text-5xl font-bold align-middle mb-6">2022 DRIVERS</h1>
         <div className="grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
           {drivers.map((driver) => (
             <DriverItem key={driver.driverId} driver={driver} />

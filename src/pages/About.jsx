@@ -12,7 +12,7 @@ function About() {
         Version <span className="text-black">1.0.0</span>
       </p>
       <p className="text-lg text-gray-400">
-        By <span className="text-black">Beth Sutton and Luke Oxner</span>
+        By <span className="text-black">Beth Sutton</span>
       </p>
     </div>
   );
